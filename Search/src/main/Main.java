@@ -18,22 +18,25 @@ public class Main {
         Vertice v1 = new Vertice("v1");
         Vertice v2 = new Vertice("v2");
         Vertice v3 = new Vertice("v3");
+        Vertice v4 = new Vertice("v4");
 
         Aresta aresta1 = new Aresta(v1, v2, 0);
-        Aresta aresta2 = new Aresta(v1, v3, 0);
-        Aresta aresta3 = new Aresta(v3, v2, 0);
+        Aresta aresta4 = new Aresta(v4, v3, 0);
 
         vertices.add(v1);
         vertices.add(v2);
         vertices.add(v3);
+        vertices.add(v4);
 
         arestas.add(aresta1);
-        arestas.add(aresta2);
-        arestas.add(aresta3);
+        arestas.add(aresta4);
 
         Grafo grafo = new Grafo(vertices, arestas);
-
+        
+        System.out.println(grafo.ehConexo());
         System.out.println(grafo.toString());
+        grafo.buscaLargura();
+        grafo.buscaProfundidade();
 
     }
 
